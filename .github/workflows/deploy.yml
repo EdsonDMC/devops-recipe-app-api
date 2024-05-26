@@ -21,12 +21,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Ser vars
+      - name: Set vars
         run: |
-          if [[ $GITHUB_REF == 'refs/head/prod' ]]; then
+          if [[ $GITHUB_REF == 'refs/heads/prod' ]]; then
             echo "prod" > .workspace
           else
-            echo "staging" > .workspace 
+          echo "staging" > .workspace
           fi
       - name: Push to ECR
         env:
