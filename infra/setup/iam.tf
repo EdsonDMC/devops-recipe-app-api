@@ -99,6 +99,7 @@ data "aws_iam_policy_document" "ec2" {
     effect = "Allow"
     actions = [
       "ec2:DescribeVpcs",
+      "ec2:DescribeAccountAttrib",
       "ec2:CreateTags",
       "ec2:CreateVpc",
       "ec2:DeleteVpc",
